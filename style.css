@@ -9,6 +9,7 @@ background-repeat: no-repeat;
 background-attachment: fixed;
 align-items: center;
 z-index: -1;
+font-family: 'Roboto', sans-serif;  
 }
 
 .all {
