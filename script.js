@@ -48,7 +48,7 @@ const bee = () => {
         sound();
         move();
         if (m > 59){min()};
-        console.log(`sec`,m);
+//         console.log(`sec`,m);
         second.innerHTML = second.innerHTML.replace(m-1,m);
     }
     setTimeout( () => { muu()},1000 );
@@ -58,7 +58,7 @@ const bee = () => {
 // Minutes function
 const min = () => {
 zl++;
-console.log(`min`,zl);
+// console.log(`min`,zl);
 minut.innerHTML = minut.innerHTML.replace(zl-1,zl);
 second.innerHTML = second.innerHTML.replace("59","0");
 n = 1;
@@ -116,7 +116,7 @@ function move() {
       }
   }
   setProgress(h);
-  console.log(h);
+//   console.log('h',h);
 }
 
 // Sound function
