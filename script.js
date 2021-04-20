@@ -25,7 +25,7 @@ const second = document.getElementById("sec");
 // Variables that get to change in the functions
 let n = 1;
 let m = 0;
-let z = 3;
+let z = 4;    // era 3
 let zl = 0;
 let h = 0;
 let v = 0;
@@ -48,7 +48,7 @@ const bee = () => {
         sound();
         move();
         if (m > 59){min()};
-//         console.log(`sec`,m);
+        console.log(`sec`,m);
         second.innerHTML = second.innerHTML.replace(m-1,m);
     }
     setTimeout( () => { muu()},1000 );
@@ -58,7 +58,7 @@ const bee = () => {
 // Minutes function
 const min = () => {
 zl++;
-// console.log(`min`,zl);
+console.log(`min`,zl);
 minut.innerHTML = minut.innerHTML.replace(zl-1,zl);
 second.innerHTML = second.innerHTML.replace("59","0");
 n = 1;
@@ -116,7 +116,7 @@ function move() {
       }
   }
   setProgress(h);
-//   console.log('h',h);
+  console.log(h);
 }
 
 // Sound function
@@ -135,7 +135,7 @@ z = 4;
 
 // Start function
 const start = () => {
-if (z == 3 && m > 0){
+if (z == 3 && h >= 0 ){     // for start to count only once z=4 in begining
   return;
 } else {
   z = 3;
@@ -185,16 +185,16 @@ const volume = () => {
 const volumeIcon = () => {
   switch(true){
     case v > 0.8 : 
-      document.getElementById('vIcon').src='./svg/bx-volume-full.svg';
+      document.getElementById('vIcon').innerHTML = '&#xe803;';
       break;
     case v > 0.2 :
-      document.getElementById('vIcon').src='./svg/bx-volume-low.svg';
+      document.getElementById('vIcon').innerHTML = '&#xe804;';
       break;
     case v > 0 :
-      document.getElementById('vIcon').src='./svg/bx-volume.svg';
+      document.getElementById('vIcon').innerHTML = '&#xe806;';
       break;
     case v == 0 :
-      document.getElementById('vIcon').src='./svg/bx-volume-mute.svg';
+      document.getElementById('vIcon').innerHTML = '&#xe805;';
       break;
   }
 }
