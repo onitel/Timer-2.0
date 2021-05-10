@@ -59,7 +59,7 @@ z-index: -9;
 .progress-ring__circle {
   display: flex;
   z-index: 2;
-  transition: 0.35s stroke-dashoffset;
+  transition: 1s stroke-dashoffset;
   /* axis compensation */
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
